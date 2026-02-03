@@ -8,3 +8,9 @@ let b = 20;
 a = 30;
 a = a ?? b;
 console.log(a);
+
+//11. 삼항연산자 
+// 요구사항 : 변수 res에 var8의 값이 짝수 -> "짝", 홀수 -> "홀" 
+let var8 = 10; 
+let res = var8 % 2 === 0 ? "짝수" : "홀수"; 
+console.log(res);
