@@ -1,6 +1,6 @@
 //내장함수(라이브러리) (반복문 => 자기스타일로 변경 반복문)
-//forEach 멤버함수 화살표함수
 /*
+ 1 forEach 
 const array = [1,2,3,4];
 
  for (let i = 0; i < array.length; i++) {
@@ -22,42 +22,42 @@ array.forEach((value)=>{
 
 
 console.log(array);
-*/
-// const array = [1,2,3,4];
-// const newArray = [];
 
-// for (let i = 0; i < array.length; i++) {
-//   let value =  array[i];
-//   value = value * 10;
-//   newArray.push(value);
-// }
+const array = [1,2,3,4];
+const newArray = [];
 
-// console.log(array)
-// console.log(newArray)
+for (let i = 0; i < array.length; i++) {
+  let value =  array[i];
+  value = value * 10;
+  newArray.push(value);
+}
 
-// let _newArray = array.map((value)=> value*10);
-// console.log (_newArray);
+console.log(array)
+console.log(newArray)
 
-//filter
-//기존 배열에서 조건을 만족하는 요소들만 필터링하여 새로운 배열로 반환
+let _newArray = array.map((value)=> value*10);
+console.log (_newArray);
+
+filter
+기존 배열에서 조건을 만족하는 요소들만 필터링하여 새로운 배열로 반환
 
 
-// let array2 = [ 
-// { name: "구길동", hobby: "테니스" },
-// { name: "저길동", hobby: "테니스" }, 
-// { name: "홍길동", hobby: "독서" }, 
-// ]; 
+let array2 = [ 
+{ name: "구길동", hobby: "테니스" },
+{ name: "저길동", hobby: "테니스" }, 
+{ name: "홍길동", hobby: "독서" }, 
+]; 
 
-// let newArray2 = array2.filter(item => item.hobby === "테니스");
-// array2.filter((value)=>{value.hobby === "독서"});
+let newArray2 = array2.filter(item => item.hobby === "테니스");
+array2.filter((value)=>{value.hobby === "독서"});
 
-// console.log(array2);
-// console.log(newArray2);
+console.log(array2);
+console.log(newArray2);
 
-// array1.filter((value)=>{value.hobby === "테니스"});
+array1.filter((value)=>{value.hobby === "테니스"});
 
-// console.let(array1);
-// console.let(newArray1);
+console.let(array1);
+console.let(newArray1);
 /*
 let array1 = [ 
 { name: "구길동", hobby: "테니스" },

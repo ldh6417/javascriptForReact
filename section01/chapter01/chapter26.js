@@ -41,3 +41,4 @@ function funcC(p1,...rest){
   console.log(rest)
 }
 funcC(...array7);
+

@@ -317,3 +317,4 @@ coolFood2("떡볶이")
 })
 .then((value)=>{console.log(value)})
 .catch((error)=>console.log(error))
+
