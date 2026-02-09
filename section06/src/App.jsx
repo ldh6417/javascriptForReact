@@ -1,0 +1,29 @@
+import './App.css'
+import { useState } from 'react'
+import Viewer from './compoents/Viewer';
+import Controller from './compoents/controller';
+
+function App() {
+  const [count, setCount] = useState(0);
+  const onClickButton = (e) => {
+     setCount(count +  parseInt (e.target.value))
+  };
+console.log(`App 리렌더링 ${count}`)
+  return (
+    <>
+    <div className="App">
+      {/*제목*/}
+      <h1>카운터앱</h1>   
+    {/*카운터뷰*/}
+     <Viewer count = {count}/>
+    {/*카운터 이벤트 버튼*/}
+    
+    <Controller onClickButton = {onClickButton}/>
+      
+    </div>
+  
+    </>
+  )
+}
+
+export default App
