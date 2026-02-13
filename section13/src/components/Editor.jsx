@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "./Button";
 import './Editor.css'
 import EmotionItem from "./EmotionItem";
@@ -39,14 +39,23 @@ const getStringDate = (targetDate) => {
   return `${year}-${month}-${date}`;
 }
 
-const Editor = ({ onSubmit }) => {
+const Editor = ({ onSubmit, initData }) => {
   const nav = useNavigate();
-
-  const [input, setInput] = useState({
+  const [createdDate, setCreatedDate] = useState(initData ? new Date(initData.createdDate) : new Date())
+  // useEffect 없이 바로 초기값으로 할당
+  const [input, setInput] = useState(initData ? {
+    ...initData,
+    createdDate: new Date(initData.createdDate)
+  } : {
     createdDate: new Date(),
-    emotionId: 5,
+    emotionId: 3,
     content: ""
   });
+
+  //마운트기능 마운트가 되자마자 전달되는 initData 값을 각각의 useState 변수 저장해야된다.
+
+
+
 
   const onChangeInput = (e) => {
     let name = e.target.name

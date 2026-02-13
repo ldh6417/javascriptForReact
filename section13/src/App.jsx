@@ -42,7 +42,7 @@ function reducer(state, action) {
       );
 
     case "DELETE":
-      return state.filter((item) => item.id !== action.id);
+      return state.filter((item) => String(item.id) !== String(action.id));
 
     default:
       return state;
