@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom"
 
 
 const DiaryItem = ({ id, emotionId, createdDate, content }) => {
+  console.log(typeof emotionId, emotionId);
   const nav = useNavigate();
   return <>
     <div className="DiaryItem">
