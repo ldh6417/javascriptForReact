@@ -4,6 +4,7 @@ import Loading from "../pages/Loading";
 import ListPage from "../pages/todo/ListPage";
 import ReadPage from "../pages/todo/ReadPage";
 import ModifyPage from "../pages/todo/ModifyPage";
+import AddComponent from "../components/todo/AddComponent";
 
 // 라우터 (컨트롤러 대상이 되는 페이지를 가져와야 한다.)
 const Main = lazy(() => import("../pages/MainPage"));
@@ -12,6 +13,8 @@ const Login = lazy(() => import("../pages/LoginPage"));
 const List = lazy(() => import("../pages/todo/ListPage"));
 const Read = lazy(() => import("../pages/todo/ReadPage"));
 const Modify = lazy(() => import("../pages/todo/ModifyPage"));
+const Add = lazy(() => import("../pages/todo/AddPage"));
+
 
 const Root = createBrowserRouter([
   {
@@ -59,6 +62,14 @@ const Root = createBrowserRouter([
     element: (
       <Suspense fallback={<Loading />}>
         <Modify />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/todo/add",
+    element: (
+      <Suspense fallback={<Loading />}>
+        <Add />
       </Suspense>
     ),
   },
