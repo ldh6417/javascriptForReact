@@ -1,0 +1,8 @@
+div.text-center { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 500px; 
+  text-align: center; 
+  color: red; 
+}
