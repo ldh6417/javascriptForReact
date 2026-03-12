@@ -1,24 +1,24 @@
 import Header from "../../include/Header";
-import { useParams, useSearchParams } from "react-router-dom";
-import "./ModifyPage.css"
+import ModifyComponent from "../../components/todo/ModifyComponent";
+import { useParams } from "react-router-dom";
+import useCustomMove from "../../hooks/useCustomMove";
+import "./ModifyPage.css";
+import React from "react";
 
 const ModifyPage = () => {
   const { tno } = useParams();
-  const [queryParms] = useSearchParams();
-
-  const page = queryParms.get("page") ? parseInt(queryParms.get("page")) : (1);
-  const size = queryParms.get("size") ? parseInt(queryParms.get("size")) : (10);
-
+  const { moveToList, moveToRead } = useCustomMove();
   return (
-    <div className="main-container">
+    <div className="list-page-container">
       <Header />
-      <p>Modify Page tno = {tno}</p>
-      <p>Modify Page tno = {page} size={size}</p>
-      <main className="content-area">
-        <div className="button-wrapper">
-          <button className="custom-btn-outline" type="button">
-            Modify Page
-          </button>
+      <main className="list-content-area">
+        <div className="list-wrapper">
+          {/* 실제 데이터 목록이 표시되는 컴포넌트 */}
+          <ModifyComponent
+            tno={tno}
+            moveToList={moveToList}
+            moveToRead={moveToRead}
+          />
         </div>
       </main>
     </div>

@@ -1,5 +1,5 @@
 import "./PageComponent.css"; // CSS 파일 임포트 
-
+import React from "react";
 const PageComponent = ({ serverData, moveToList }) => {
   return (
     <div className="pagination-container">

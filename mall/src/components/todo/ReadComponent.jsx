@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getOne } from "../../api/todoApi";
 import "./ReadComponent.css"; // CSS 파일 임포트
+import React from "react";
 
 const initState = {
   tno: 0,

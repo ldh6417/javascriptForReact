@@ -21,3 +21,15 @@ export const postAdd = async (todoObj) => {
   return res.data;
 };
 
+//http://localhost:8080/api/todo/10/method = delete
+export const deleteOne = async (tno) => {
+  const res = await axios.delete(`${prefix}/${tno}`);
+  return res.data;
+}
+
+//http://localhost:8080/api/todo/10/method = put(update)
+export const putOne = async (todo) => {
+  const res = await axios.put(`${prefix}/${todo.tno}`, todo)
+  return res.data
+}
+

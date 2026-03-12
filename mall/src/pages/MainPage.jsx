@@ -1,6 +1,7 @@
 import Header from "../include/Header";
 import "./MainPage.css";
 import { Link } from "react-router-dom";
+import React from "react";
 
 const MainPage = () => {
   return (
